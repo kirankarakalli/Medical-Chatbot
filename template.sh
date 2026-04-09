@@ -2,6 +2,7 @@
 
 mkdir -p src
 mkdir -p research
+mkdir data
 
 touch src/__init__.py
 touch src/helper.py

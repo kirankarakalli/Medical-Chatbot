@@ -5,7 +5,8 @@ __pycache__/
 /medienv
 # C extensions
 *.so
-
+data/
+.vscode/
 # Distribution / packaging
 .Python
 build/
