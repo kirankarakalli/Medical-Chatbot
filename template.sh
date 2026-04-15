@@ -3,6 +3,8 @@
 mkdir -p src
 mkdir -p research
 mkdir data
+mkdir templates
+mkdir static
 
 touch src/__init__.py
 touch src/helper.py
