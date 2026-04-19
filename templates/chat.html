@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="chat-container">
+    <h2>Medical Chatbot</h2>
+    <div id="messages" class="messages"></div>
+    <div class="input-area">
+        <input type="text" id="question" placeholder="Ask a medical question..." autocomplete="off" />
+        <button id="send-btn">Send</button>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock %}
