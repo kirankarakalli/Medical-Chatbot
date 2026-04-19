@@ -128,3 +128,106 @@ open up localhost:
    - ECR_REPO
    - PINECONE_API_KEY
    - OPENAI_API_KEY
+
+
+
+
+
+
+Medical-Chatbot/
+│
+├── .github/
+│   └── workflows/
+│       ├── ci.yml                    # CI/CD pipeline
+│       └── deploy.yml                # Deployment workflow
+│
+├── src/
+│   ├── __init__.py
+│   ├── config/
+│   │   ├── __init__.py
+│   │   ├── settings.py               # Configuration management
+│   │   └── logging_config.py         # Logging setup
+│   │
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── embeddings.py             # Embedding generation
+│   │   ├── vector_store.py           # Vector DB operations
+│   │   └── chain.py                  # RAG chain setup
+│   │
+│   ├── api/
+│   │   ├── __init__.py
+│   │   ├── routes.py                 # API endpoints
+│   │   ├── middleware.py             # Rate limiting, auth
+│   │   └── schemas.py                # Pydantic models
+│   │
+│   ├── services/
+│   │   ├── __init__.py
+│   │   ├── chatbot_service.py        # Business logic
+│   │   ├── cache_service.py          # Redis caching
+│   │   └── monitoring_service.py     # Metrics tracking
+│   │
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── validators.py             # Input validation
+│   │   ├── exceptions.py             # Custom exceptions
+│   │   └── decorators.py             # Reusable decorators
+│   │
+│   ├── helper.py                     # Keep existing helper
+│   └── prompt.py                     # Keep existing prompt
+│
+├── tests/
+│   ├── __init__.py
+│   ├── unit/
+│   │   ├── test_embeddings.py
+│   │   ├── test_chain.py
+│   │   └── test_api.py
+│   ├── integration/
+│   │   └── test_chatbot_flow.py
+│   └── conftest.py                   # Pytest fixtures
+│
+├── templates/
+│   ├── chat.html                     # Enhanced UI
+│   ├── base.html                     # Base template
+│   └── admin.html                    # Admin dashboard
+│
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── chat.js                   # Frontend logic
+│   └── images/
+│
+├── data/
+│   └── medical_documents/            # PDF storage
+│
+├── logs/                             # Application logs
+│
+├── notebooks/
+│   ├── data_exploration.ipynb
+│   └── model_evaluation.ipynb
+│
+├── deployment/
+│   ├── docker-compose.yml
+│   ├── kubernetes/
+│   │   ├── deployment.yaml
+│   │   └── service.yaml
+│   └── terraform/                    # IaC for AWS
+│
+├── docs/
+│   ├── API.md                        # API documentation
+│   ├── ARCHITECTURE.md               # System design
+│   ├── DEPLOYMENT.md                 # Deployment guide
+│   └── CONTRIBUTING.md               # Contribution guidelines
+│
+├── .env.example                      # Environment template
+├── .gitignore
+├── .dockerignore
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+├── requirements-dev.txt              # Dev dependencies
+├── setup.py
+├── pytest.ini                        # Pytest configuration
+├── Makefile                          # Common commands
+├── README.md
+└── LICENSE
